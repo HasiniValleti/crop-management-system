@@ -208,7 +208,7 @@ elseif($k < 50){
     }
 
 }
-}
+
 
 
 /* 3️⃣ Fertilizer Quantity Suggestion */
@@ -319,6 +319,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
