@@ -47,16 +47,16 @@
            </div>
         </div>
     </footer>
-   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
+
+  	<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <script>
 $(document).ready(function() {
     $('#soil_select').select2();
 });
 </script>
-
-  	<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
-	
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
 	
@@ -73,3 +73,4 @@ $(document).ready(function() {
 
 
 	<script src="https://use.fontawesome.com/ee1c3da296.js"></script>
+
