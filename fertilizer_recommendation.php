@@ -299,7 +299,7 @@ if($sm > 60){
 					$command = escapeshellcmd("python ML/fertilizer_recommendation/fertilizer_recommendation.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonsm $Jsonsoil $Jsoncrop ");
                     $output = passthru($command);
 					echo $output;					
-					}
+					
                     ?>
 					</h4>
             </div>
@@ -316,6 +316,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
