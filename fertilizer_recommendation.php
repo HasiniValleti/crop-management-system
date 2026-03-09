@@ -288,7 +288,7 @@ if($sm > 60){
     echo "<p>Soil moisture is high. Avoid overwatering.</p>";
 }
 		//	echo "<h5>Recommended Fertilizer is :</h5>";
-			}
+			
 
 
 					$Jsonn=json_encode($n);
@@ -302,7 +302,8 @@ if($sm > 60){
 
 					$command = escapeshellcmd("python ML/fertilizer_recommendation/fertilizer_recommendation.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonsm $Jsonsoil $Jsoncrop ");
                     $output = passthru($command);
-					echo $output;					
+					echo $output;		
+					}
 					
                     ?>
 					</h4>
@@ -320,6 +321,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
