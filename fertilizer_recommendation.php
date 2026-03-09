@@ -175,36 +175,37 @@
 					$crop=trim($_POST['crop']);
 					$type = trim($_POST['fertilizer_type']);
 						echo "<h4>Soil Analysis</h4>";
-
-/* 1️⃣ Nutrient Deficiency Detection */
-
-if($n < 50){
-    echo "<p>Nitrogen deficiency detected.</p>";
-}
-
-if($p < 50){
-    echo "<p>Phosphorus deficiency detected.</p>";
-}
-
-if($k < 50){
-    echo "<p>Potassium deficiency detected.</p>";
-}
-
-
-/* 2️⃣ Fertilizer Recommendation */
-
 echo "<h4>Recommended Fertilizer</h4>";
 
 if($n < 50){
-    echo "<p>Recommended: Urea</p>";
+
+    if($type == "organic"){
+        echo "<p>Recommended Organic Fertilizer: Compost</p>";
+    } else {
+        echo "<p>Recommended Fertilizer: Urea</p>";
+    }
+
 }
 
-if($p < 50){
-    echo "<p>Recommended: DAP</p>";
+elseif($p < 50){
+
+    if($type == "organic"){
+        echo "<p>Recommended Organic Fertilizer: Bone Meal</p>";
+    } else {
+        echo "<p>Recommended Fertilizer: DAP</p>";
+    }
+
 }
 
-if($k < 50){
-    echo "<p>Recommended: MOP</p>";
+elseif($k < 50){
+
+    if($type == "organic"){
+        echo "<p>Recommended Organic Fertilizer: Wood Ash</p>";
+    } else {
+        echo "<p>Recommended Fertilizer: MOP</p>";
+    }
+
+}
 }
 
 
@@ -242,21 +243,6 @@ if($k < 50){
 }
 
 
-/* 5️⃣ Organic Fertilizer Suggestion */
-
-echo "<h4>Organic Fertilizer Alternatives</h4>";
-
-if($n < 50){
-    echo "<p>Use compost or green manure as organic nitrogen source.</p>";
-}
-
-if($p < 50){
-    echo "<p>Bone meal can supply natural phosphorus.</p>";
-}
-
-if($k < 50){
-    echo "<p>Wood ash can provide potassium naturally.</p>";
-}
 
 
 /* 6️⃣ Balanced Soil Detection */
@@ -330,6 +316,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
