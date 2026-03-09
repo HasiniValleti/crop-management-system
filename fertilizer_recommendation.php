@@ -120,9 +120,11 @@
 									
 									<td>
 										<div class="form-group ">
-									<select name="crop" class="form-control">
+									<select name="crop" id="crop_select" class="form-control">
 													<option  value="">Select Crop</option>
 													<option  value="Maize">Maize</option>
+										            <option value="Cauliflower">Cauliflower</option>
+										             <option  value="Maize">Rice</option>
 													<option  value="Sugarcane">Sugarcane</option>
 													<option  value="Cotton">Cotton</option>
 													<option  value="Tobacco">Tobacco</option>
@@ -316,6 +318,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
