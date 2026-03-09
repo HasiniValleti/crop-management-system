@@ -288,7 +288,7 @@ if($sm > 60){
     echo "<p>Soil moisture is high. Avoid overwatering.</p>";
 }
 		//	echo "<h5>Recommended Fertilizer is :</h5>";
-}
+
 
 					$Jsonn=json_encode($n);
 					$Jsonp=json_encode($p);
@@ -319,6 +319,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
