@@ -163,6 +163,51 @@
 					$sm=trim($_POST['soilMoisture']);
 					$soil=trim($_POST['soil']);
 					$crop=trim($_POST['crop']);
+						echo "<h4>Soil Analysis</h4>";
+
+if($n < 50){
+    echo "<p>Nitrogen deficiency detected.</p>";
+}
+
+if($p < 50){
+    echo "<p>Phosphorus deficiency detected.</p>";
+}
+
+if($k < 50){
+    echo "<p>Potassium deficiency detected.</p>";
+}
+
+echo "<h4>Fertilizer Recommendation</h4>";
+
+if($n < 50){
+    echo "<p>Recommended Fertilizer: Urea</p>";
+}
+
+if($p < 50){
+    echo "<p>Recommended Fertilizer: DAP</p>";
+}
+
+if($k < 50){
+    echo "<p>Recommended Fertilizer: MOP</p>";
+}
+
+echo "<h4>Soil Health Advice</h4>";
+
+if($n < 50){
+    echo "<p>Add compost or nitrogen fertilizers.</p>";
+}
+
+if($p < 50){
+    echo "<p>Use phosphate fertilizers like DAP.</p>";
+}
+
+if($k < 50){
+    echo "<p>Apply potassium fertilizers such as MOP.</p>";
+}
+
+if($n >= 50 && $p >= 50 && $k >= 50){
+    echo "<p>Soil nutrients are balanced.</p>";
+}
 
 
 					echo "Recommended Fertilizer is : ";
@@ -196,4 +241,5 @@
 
 </body>
 </html>
+
 
