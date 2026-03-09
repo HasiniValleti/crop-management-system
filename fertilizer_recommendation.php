@@ -176,36 +176,129 @@
 					$type = trim($_POST['fertilizer_type']);
 						echo "<h4>Soil Analysis</h4>";
 
+/* 1️⃣ Nutrient Deficiency Detection */
+
 if($n < 50){
     echo "<p>Nitrogen deficiency detected.</p>";
-
-    if($type == "organic"){
-        echo "<p><b>Recommended Organic Fertilizer: Compost</b></p>";
-    }else{
-        echo "<p><b>Recommended Fertilizer: Urea</b></p>";
-    }
 }
 
-elseif($p < 50){
+if($p < 50){
     echo "<p>Phosphorus deficiency detected.</p>";
-
-    if($type == "organic"){
-        echo "<p><b>Recommended Organic Fertilizer: Bone Meal</b></p>";
-    }else{
-        echo "<p><b>Recommended Fertilizer: DAP</b></p>";
-    }
 }
 
-elseif($k < 50){
+if($k < 50){
     echo "<p>Potassium deficiency detected.</p>";
-
-    if($type == "organic"){
-        echo "<p><b>Recommended Organic Fertilizer: Wood Ash</b></p>";
-    }else{
-        echo "<p><b>Recommended Fertilizer: MOP</b></p>";
-    }
 }
 
+
+/* 2️⃣ Fertilizer Recommendation */
+
+echo "<h4>Recommended Fertilizer</h4>";
+
+if($n < 50){
+    echo "<p>Recommended: Urea</p>";
+}
+
+if($p < 50){
+    echo "<p>Recommended: DAP</p>";
+}
+
+if($k < 50){
+    echo "<p>Recommended: MOP</p>";
+}
+
+
+/* 3️⃣ Fertilizer Quantity Suggestion */
+
+echo "<h4>Suggested Fertilizer Quantity</h4>";
+
+if($n < 50){
+    echo "<p>Apply 40 kg Urea per acre</p>";
+}
+
+if($p < 50){
+    echo "<p>Apply 35 kg DAP per acre</p>";
+}
+
+if($k < 50){
+    echo "<p>Apply 30 kg MOP per acre</p>";
+}
+
+
+/* 4️⃣ Soil Health Advice */
+
+echo "<h4>Soil Health Advice</h4>";
+
+if($n < 50){
+    echo "<p>Add compost or nitrogen fertilizers.</p>";
+}
+
+if($p < 50){
+    echo "<p>Use phosphate fertilizers for better root growth.</p>";
+}
+
+if($k < 50){
+    echo "<p>Potassium fertilizers improve crop resistance.</p>";
+}
+
+
+/* 5️⃣ Organic Fertilizer Suggestion */
+
+echo "<h4>Organic Fertilizer Alternatives</h4>";
+
+if($n < 50){
+    echo "<p>Use compost or green manure as organic nitrogen source.</p>";
+}
+
+if($p < 50){
+    echo "<p>Bone meal can supply natural phosphorus.</p>";
+}
+
+if($k < 50){
+    echo "<p>Wood ash can provide potassium naturally.</p>";
+}
+
+
+/* 6️⃣ Balanced Soil Detection */
+
+if($n >= 50 && $p >= 50 && $k >= 50){
+    echo "<h4>Soil Status</h4>";
+    echo "<p>Soil nutrients are balanced. No additional fertilizer required.</p>";
+}
+
+
+/* 7️⃣ Crop Suitability Advice */
+
+echo "<h4>Crop Suitability Advice</h4>";
+
+if($soil == "Sandy"){
+    echo "<p>Sandy soil is suitable for crops like groundnut and watermelon.</p>";
+}
+
+if($soil == "Loamy"){
+    echo "<p>Loamy soil supports crops like wheat, rice, and maize.</p>";
+}
+
+if($soil == "Clay"){
+    echo "<p>Clay soil retains water and is suitable for paddy cultivation.</p>";
+}
+
+
+/* 8️⃣ Irrigation Suggestion */
+
+echo "<h4>Irrigation Suggestion</h4>";
+
+if($sm < 30){
+    echo "<p>Soil moisture is low. Increase irrigation.</p>";
+}
+
+if($sm >= 30 && $sm <= 60){
+    echo "<p>Soil moisture is adequate. Maintain regular irrigation.</p>";
+}
+
+if($sm > 60){
+    echo "<p>Soil moisture is high. Avoid overwatering.</p>";
+}
 				//	echo "<h5>Recommended Fertilizer is :</h5>";
 
 					$Jsonn=json_encode($n);
@@ -237,6 +330,7 @@ elseif($k < 50){
 
 </body>
 </html>
+
 
 
 
