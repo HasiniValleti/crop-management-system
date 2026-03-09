@@ -163,6 +163,97 @@
 					$sm=trim($_POST['soilMoisture']);
 					$soil=trim($_POST['soil']);
 					$crop=trim($_POST['crop']);
+						echo "<h4>Soil Analysis</h4>";
+
+/* 1️⃣ Nutrient Deficiency Detection */
+
+if($n < 50){
+    echo "<p>Nitrogen deficiency detected.</p>";
+}
+
+if($p < 50){
+    echo "<p>Phosphorus deficiency detected.</p>";
+}
+
+if($k < 50){
+    echo "<p>Potassium deficiency detected.</p>";
+}
+
+
+/* 2️⃣ Fertilizer Recommendation */
+
+echo "<h4>Recommended Fertilizer</h4>";
+
+if($n < 50){
+    echo "<p>Recommended: Urea</p>";
+}
+
+if($p < 50){
+    echo "<p>Recommended: DAP</p>";
+}
+
+if($k < 50){
+    echo "<p>Recommended: MOP</p>";
+}
+
+
+/* 3️⃣ Fertilizer Quantity Suggestion */
+
+echo "<h4>Suggested Fertilizer Quantity</h4>";
+
+if($n < 50){
+    echo "<p>Apply 40 kg Urea per acre</p>";
+}
+
+if($p < 50){
+    echo "<p>Apply 35 kg DAP per acre</p>";
+}
+
+if($k < 50){
+    echo "<p>Apply 30 kg MOP per acre</p>";
+}
+
+
+/* 4️⃣ Soil Health Advice */
+
+echo "<h4>Soil Health Advice</h4>";
+
+if($n < 50){
+    echo "<p>Add compost or nitrogen fertilizers.</p>";
+}
+
+if($p < 50){
+    echo "<p>Use phosphate fertilizers for better root growth.</p>";
+}
+
+if($k < 50){
+    echo "<p>Potassium fertilizers improve crop resistance.</p>";
+}
+
+
+/* 5️⃣ Organic Fertilizer Suggestion */
+
+echo "<h4>Organic Fertilizer Alternatives</h4>";
+
+if($n < 50){
+    echo "<p>Use compost or green manure as organic nitrogen source.</p>";
+}
+
+if($p < 50){
+    echo "<p>Bone meal can supply natural phosphorus.</p>";
+}
+
+if($k < 50){
+    echo "<p>Wood ash can provide potassium naturally.</p>";
+}
+
+
+/* 6️⃣ Balanced Soil Detection */
+
+if($n >= 50 && $p >= 50 && $k >= 50){
+    echo "<h4>Soil Status</h4>";
+    echo "<p>Soil nutrients are balanced. No additional fertilizer required.</p>";
+}
 
 
 					echo "Recommended Fertilizer is : ";
@@ -196,4 +287,5 @@
 
 </body>
 </html>
+
 
