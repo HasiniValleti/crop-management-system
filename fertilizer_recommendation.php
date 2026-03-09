@@ -173,6 +173,7 @@
 					$sm=trim($_POST['soilMoisture']);
 					$soil=trim($_POST['soil']);
 					$crop=trim($_POST['crop']);
+					$type = trim($_POST['fertilizer_type']);
 						echo "<h4>Soil Analysis</h4>";
 
 if($n < 50){
@@ -236,6 +237,7 @@ elseif($k < 50){
 
 </body>
 </html>
+
 
 
 
