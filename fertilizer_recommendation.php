@@ -57,6 +57,8 @@
 					<th><center>Soil Moisture</center></th>
 					<th><center>Soil Type</center></th>
 					<th><center>Crop</center></th>
+				    <th><center>Fertilizer Type</center></th>
+					
         </tr>
     </thead>
  <tbody>
@@ -135,6 +137,14 @@
 										</div>
 
 									</td>
+									 <td>
+                                           <div class="form-group">
+                                         <select name="fertilizer_type" class="form-control">
+                                   <option value="chemical">Chemical</option>
+                                    <option value="organic">Organic</option>
+                                     </select>
+                                      </div>
+                                    </td>
                                 </tr>
                             </tbody>
 							
@@ -167,23 +177,33 @@
 
 if($n < 50){
     echo "<p>Nitrogen deficiency detected.</p>";
-    echo "<p><b>Recommended Fertilizer: Urea</b></p>";
+
+    if($type == "organic"){
+        echo "<p><b>Recommended Organic Fertilizer: Compost</b></p>";
+    }else{
+        echo "<p><b>Recommended Fertilizer: Urea</b></p>";
+    }
 }
 
-if($p < 50){
+elseif($p < 50){
     echo "<p>Phosphorus deficiency detected.</p>";
-    echo "<p><b>Recommended Fertilizer: DAP</b></p>";
+
+    if($type == "organic"){
+        echo "<p><b>Recommended Organic Fertilizer: Bone Meal</b></p>";
+    }else{
+        echo "<p><b>Recommended Fertilizer: DAP</b></p>";
+    }
 }
 
-if($k < 50){
+elseif($k < 50){
     echo "<p>Potassium deficiency detected.</p>";
-    echo "<p><b>Recommended Fertilizer: MOP</b></p>";
-}
 
-if($n >= 50 && $p >= 50 && $k >= 50){
-    echo "<p>Soil nutrients are balanced. No fertilizer required.</p>";
+    if($type == "organic"){
+        echo "<p><b>Recommended Organic Fertilizer: Wood Ash</b></p>";
+    }else{
+        echo "<p><b>Recommended Fertilizer: MOP</b></p>";
+    }
 }
-
 
 					echo "Recommended Fertilizer is : ";
 
@@ -216,6 +236,7 @@ if($n >= 50 && $p >= 50 && $k >= 50){
 
 </body>
 </html>
+
 
 
 
