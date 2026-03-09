@@ -55,6 +55,7 @@
 <script>
 $(document).ready(function() {
     $('#soil_select').select2();
+	 $('#crop_select').select2();
 });
 </script>
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
@@ -73,4 +74,5 @@ $(document).ready(function() {
 
 
 	<script src="https://use.fontawesome.com/ee1c3da296.js"></script>
+
 
