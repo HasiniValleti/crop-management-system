@@ -123,7 +123,6 @@
 									<select name="crop" id="crop_select" class="form-control">
 													<option  value="">Select Crop</option>
 													<option  value="Maize">Maize</option>
-										            <option value="Cauliflower">Cauliflower</option>
 										             <option  value="Maize">Rice</option>
 													<option  value="Sugarcane">Sugarcane</option>
 													<option  value="Cotton">Cotton</option>
@@ -167,15 +166,15 @@
 					<h4>
 					<?php 
 					if(isset($_POST['Fert_Recommend'])){
-					$n=trim($_POST['n']);
-					$p=trim($_POST['p']);
-					$k=trim($_POST['k']);
-					$t=trim($_POST['t']);
-					$h=trim($_POST['h']);
-					$sm=trim($_POST['soilMoisture']);
-					$soil=trim($_POST['soil']);
-					$crop=trim($_POST['crop']);
-					$type = trim($_POST['fertilizer_type']);
+					$n=trim($_POST['n'] ?? 0);
+					$p=trim($_POST['p'] ?? 0);
+					$k=trim($_POST['k'] ?? 0);
+					$t=trim($_POST['t'] ?? 0);
+					$h=trim($_POST['h'] ?? 0);
+					$sm=trim($_POST['soilMoisture'] ?? 0);
+					$soil=trim($_POST['soil'] ?? "");
+					$crop=trim($_POST['crop'] ?? "");
+					$type = trim($_POST['fertilizer_type'] ?? "");
 					echo "<h4>Soil Analysis</h4>";
 
 /* 1️⃣ Nutrient Deficiency Detection */
@@ -321,6 +320,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
