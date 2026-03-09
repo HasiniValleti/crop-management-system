@@ -206,7 +206,7 @@ elseif($k < 50){
     }
 }
 
-					echo "Recommended Fertilizer is : ";
+				//	echo "<h5>Recommended Fertilizer is :</h5>";
 
 					$Jsonn=json_encode($n);
 					$Jsonp=json_encode($p);
@@ -237,6 +237,7 @@ elseif($k < 50){
 
 </body>
 </html>
+
 
 
 
