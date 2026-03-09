@@ -51,7 +51,7 @@
 					<tr class="font-weight-bold text-default">
 					<th><center> Nitrogen</center></th>
 					<th><center>Phosporous</center></th>
-					<th><center>Potasioum</center></th>
+					<th><center>Potassium</center></th>
 					<th><center>Temparature</center></th>
 					<th><center>Humidity</center></th>
 					<th><center>Soil Moisture</center></th>
@@ -237,6 +237,7 @@ elseif($k < 50){
 
 </body>
 </html>
+
 
 
 
