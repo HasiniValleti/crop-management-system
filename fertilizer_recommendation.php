@@ -107,7 +107,7 @@
 									
 									<td>
 										<div class="form-group ">
-													<select name="soil" class="form-control">
+													<select name="soil" id="soil_select" class="form-control">
 													<option  value="">Select Soil Type</option>
 													<option  value="Sandy">Sandy</option>
 													<option  value="Loamy">Loamy</option>
@@ -316,6 +316,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
