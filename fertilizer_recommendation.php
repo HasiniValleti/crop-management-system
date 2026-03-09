@@ -167,46 +167,21 @@
 
 if($n < 50){
     echo "<p>Nitrogen deficiency detected.</p>";
+    echo "<p><b>Recommended Fertilizer: Urea</b></p>";
 }
 
 if($p < 50){
     echo "<p>Phosphorus deficiency detected.</p>";
+    echo "<p><b>Recommended Fertilizer: DAP</b></p>";
 }
 
 if($k < 50){
     echo "<p>Potassium deficiency detected.</p>";
-}
-
-echo "<h4>Fertilizer Recommendation</h4>";
-
-if($n < 50){
-    echo "<p>Recommended Fertilizer: Urea</p>";
-}
-
-if($p < 50){
-    echo "<p>Recommended Fertilizer: DAP</p>";
-}
-
-if($k < 50){
-    echo "<p>Recommended Fertilizer: MOP</p>";
-}
-
-echo "<h4>Soil Health Advice</h4>";
-
-if($n < 50){
-    echo "<p>Add compost or nitrogen fertilizers.</p>";
-}
-
-if($p < 50){
-    echo "<p>Use phosphate fertilizers like DAP.</p>";
-}
-
-if($k < 50){
-    echo "<p>Apply potassium fertilizers such as MOP.</p>";
+    echo "<p><b>Recommended Fertilizer: MOP</b></p>";
 }
 
 if($n >= 50 && $p >= 50 && $k >= 50){
-    echo "<p>Soil nutrients are balanced.</p>";
+    echo "<p>Soil nutrients are balanced. No fertilizer required.</p>";
 }
 
 
@@ -241,5 +216,6 @@ if($n >= 50 && $p >= 50 && $k >= 50){
 
 </body>
 </html>
+
 
 
