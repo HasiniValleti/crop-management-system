@@ -228,18 +228,36 @@ elseif($k < 50){
 
 /* 3️⃣ Fertilizer Quantity Suggestion */
 
-echo "<h4>Suggested Fertilizer Quantity</h4>";
+if($type == "chemical"){
 
-if($n < 50){
-    echo "<p>Apply 40 kg Urea per acre</p>";
+    if($n < 50){
+        echo "<p>Apply 40 kg Urea per acre</p>";
+    }
+
+    if($p < 50){
+        echo "<p>Apply 35 kg DAP per acre</p>";
+    }
+
+    if($k < 50){
+        echo "<p>Apply 30 kg MOP per acre</p>";
+    }
+
 }
 
-if($p < 50){
-    echo "<p>Apply 35 kg DAP per acre</p>";
-}
+else if($type == "organic"){
 
-if($k < 50){
-    echo "<p>Apply 30 kg MOP per acre</p>";
+    if($n < 50){
+        echo "<p>Apply 2 tons Compost per acre</p>";
+    }
+
+    if($p < 50){
+        echo "<p>Apply 25 kg Bone Meal per acre</p>";
+    }
+
+    if($k < 50){
+        echo "<p>Apply 30 kg Wood Ash per acre</p>";
+    }
+
 }
 
 
@@ -321,6 +339,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
