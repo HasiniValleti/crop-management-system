@@ -227,6 +227,7 @@ elseif($k < 50){
 }
 
 /* 3️⃣ Fertilizer Quantity Suggestion */
+echo "<h4>Suggested Fertilizer Quantity</h4>";
 
 if($type == "chemical"){
 
@@ -339,6 +340,7 @@ if($sm > 60){
 
 </body>
 </html>
+
 
 
 
